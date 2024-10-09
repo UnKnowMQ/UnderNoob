@@ -1,0 +1,44 @@
+.fa-close{
+    cursor: pointer;
+}
+button {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+}
+span {
+    cursor: pointer;
+}
+.regis_popup {
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background-color: #00000090;
+    display: grid;
+}
+.regis {
+    place-self: center;
+    width: max(23vw, 330px);
+    color: #808080;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 25px 30px; 
+    background-color: white;
+    border-radius: 8px;
+}
+.regis-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.regis_inp {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.regis_inp input {
+    padding: 10px;
+
+}
