@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "trade_app",
   "private": true,
   "version": "0.0.0",
@@ -30,9 +29,5 @@
     "eslint-plugin-react-refresh": "^0.4.9",
     "globals": "^15.9.0",
     "vite": "^5.4.1"
-=======
-  "devDependencies": {
-    "eslint-plugin-react": "^7.36.1"
->>>>>>> dd902975d6d8acfef63f2c55bdf4ad44fe44bc07
   }
 }
