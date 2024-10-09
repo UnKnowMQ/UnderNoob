@@ -1,0 +1,24 @@
+.fot {
+    margin-top: 20px;
+    border-top: solid 1px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+.comp {
+    float: left;
+}
+.link_ref {
+    float: right;
+}
+.link_ref i {
+    padding-left: 25px;
+}
+.below {
+    width: 90%;
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}

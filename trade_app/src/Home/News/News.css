@@ -1,0 +1,12 @@
+.normal-news {
+    width: 300px;
+    height: 200px;
+    /* Other styles */
+  }
+  
+  /* Styling for the first news item */
+  .large-news {
+    width: 600px; /* Larger width for the first item */
+    height: 400px; /* Larger height for the first item */
+    /* Other styles */
+  }
