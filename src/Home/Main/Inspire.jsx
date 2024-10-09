@@ -23,6 +23,7 @@ const divStyle = {
   backgroundSize: 'contain',
   backgroundRepeat: 'no-repeat',   
   backgroundColor: '#f0f0f0' 
+  
 };
 
 const Inspire = () => {

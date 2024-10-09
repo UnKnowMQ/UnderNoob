@@ -1,12 +1,89 @@
-.normal-news {
-    width: 300px;
-    height: 200px;
-    /* Other styles */
+.news-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Default behavior */
+  padding: 20px;
+}
+
+.news-container.center-items {
+  justify-content: center; /* Center items when there are fewer than four */
+}
+
+.news-item {
+  flex: 1 1 calc(25% - 20px); /* Default for four items */
+  margin: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  max-width: 345px; /* Added max-width to ensure items are centered nicely */
+}
+
+/* Other styles remain the same */
+
+
+/* Hover effect */
+.news-item:hover {
+  transform: scale(1.05);
+}
+
+/* Image styling */
+.news-item img {
+  width: 100%;
+  height: auto;
+}
+
+/* Title styling */
+.news-item h3 {
+  font-size: 18px;
+  padding: 10px;
+  margin: 0;
+}
+
+/* Description styling */
+.news-item p {
+  padding: 0 10px 10px;
+  color: #555;
+}
+
+/* Loading state styling */
+.loading {
+  text-align: center;
+  font-size: 20px;
+  margin: 20px;
+}
+
+/* Error state styling */
+.error {
+  color: red;
+  text-align: center;
+  margin: 20px;
+}
+
+/* No articles state styling */
+.no-articles {
+  text-align: center;
+  font-size: 18px;
+  margin: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .news-item {
+    flex: 1 1 calc(33.33% - 20px);
   }
-  
-  /* Styling for the first news item */
-  .large-news {
-    width: 600px; /* Larger width for the first item */
-    height: 400px; /* Larger height for the first item */
-    /* Other styles */
+}
+
+@media (max-width: 768px) {
+  .news-item {
+    flex: 1 1 calc(50% - 20px);
   }
+}
+
+@media (max-width: 480px) {
+  .news-item {
+    flex: 1 1 100%;
+  }
+}

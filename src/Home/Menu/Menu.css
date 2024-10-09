@@ -1,14 +1,15 @@
 .Menu {
     width: 100%;
-    height: 40px;
+    height: 60px; /* Increased height for better usability */
     display: flex; 
     justify-content: center; 
     align-items: center; 
-    border-top: 2px solid;
-    border-bottom: 2px solid;
+    border-top: 2px solid #ccc; /* Use a color for visibility */
+    border-bottom: 2px solid #ccc;
+    background-color: #f8f9fa; /* Background color for visibility */
 }
 
-.Menu>ul {
+.Menu > ul {
     width: 100%;
     list-style-type: none;
     display: flex; 
@@ -17,13 +18,61 @@
     margin: 0; 
 }
 
-.Menu>ul>li {
+.Menu > ul > li {
     padding: 0 20px; 
     text-align: center; 
-    padding: 100px;
+    position: relative; /* For positioning submenus */
 }
 
+/* Padding should be more reasonable */
+.Menu > ul > li {
+    padding: 10px 60px; /* Adjust padding for usability */
+    cursor: pointer; /* Indicate clickable items */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+.Menu > ul > li:hover {
+    background-color: #e2e6ea; /* Light hover effect */
+}
+
+/* Submenu styles */
 .sub1, .sub2 {
     list-style-type: none;
-    display: none;
+    display: none; /* Initially hidden */
+    position: absolute; /* Position relative to the parent li */
+    top: 100%; /* Position below the menu item */
+    left: 0;
+    background-color: white; /* Background for submenu */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+    z-index: 10; /* Ensure it appears above other elements */
+}
+
+.Menu > ul > li:hover .sub1,
+.Menu > ul > li:hover .sub2 {
+    display: block; /* Show submenu on hover */
+}
+
+.sub1 > li, .sub2 > li {
+    padding: 10px 20px; /* Padding for submenu items */
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .Menu {
+        height: auto; /* Allow dynamic height */
+        flex-direction: column; /* Stack items on smaller screens */
+    }
+
+    .Menu > ul {
+        flex-direction: column; /* Stack menu items vertically */
+    }
+
+    .Menu > ul > li {
+        padding: 10px 0; /* Adjust padding for smaller screens */
+    }
+
+    .sub1, .sub2 {
+        position: relative; /* Adjust positioning for stacked layout */
+        top: 0; /* Align with the parent li */
+    }
 }

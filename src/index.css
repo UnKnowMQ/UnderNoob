@@ -10,3 +10,12 @@ a {
 .app {
     width: 100%;
 }
+@media (max-width: 768px) {
+    .app {
+        padding: 0.5rem;
+    }
+
+    nav {
+        flex-direction: column; /* Stack navbar items */
+    }
+}

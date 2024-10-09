@@ -1,29 +1,39 @@
 .navbar {
-    padding: 20px 0px;
+    padding: 20px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* background-color: #f8f9fa; */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
 
 .navbar > img {
     width: 200px;
     height: auto;
-    margin-left: 50px;
+    margin-left: 20px;
 }
 
 .find {
     display: flex;
     align-items: center;
     position: relative;
+    flex: 1;
+    max-width: 500px;
+    margin: 0 20px;
 }
 
 .find input {
-    padding-top: 10px;
-    padding-left: 20px;
-    padding-bottom: 10px;
+    padding: 10px 20px;
     border: 1px solid #ddd;
     border-radius: 20px;
-    width: 400px;
+    width: 100%;
+    transition: border-color 0.3s;
+}
+
+.find input:focus {
+    border-color: #007bff;
+    outline: none;
 }
 
 .fa-search {
@@ -35,7 +45,7 @@
 .sign {
     display: flex;
     gap: 10px;
-    margin-right: 50px;
+    margin-right: 20px;
 }
 
 .sign button {
@@ -45,9 +55,30 @@
     padding: 8px 25px;
     border-radius: 30px;
     cursor: pointer;
-    position: relative;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
-.sign_in:hover, .sign_up:hover {
+.sign button:hover {
     background-color: #ddd;
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .find {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+
+    .sign {
+        margin: 10px 0;
+    }
+
+    .navbar > img {
+        margin-left: 0;
+    }
 }
