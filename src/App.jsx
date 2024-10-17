@@ -8,7 +8,7 @@ import News from './Home/News/News';
 import Advertise from './Home/Advertise/Advertise';
 import Below_News from './Home/News/Below_News'
 import Footer from './Home/Footer/Footer';
-
+import Coinprice from './Home/CoinPrice/Coinprice';
 const App = () => {
   const [showLogin, setShowLogin] = useState(false);
   const [showRegister, setShowRegister] = useState(false);
@@ -22,8 +22,9 @@ const App = () => {
       <div className='app'>
         
         <Navbar setShowLogin={setShowLogin} setShowRegister={setShowRegister} />
+
         <Menu />
-        
+        <Coinprice/>
         
         {!showLogin && !showRegister && (
           <>
