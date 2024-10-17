@@ -1,0 +1,77 @@
+.pricechange {
+    width: 100%; /* Increased height for better usability */
+    display: inline; 
+    height: 30px;
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center; 
+  
+    background-color: #f8f9fa; /* Background color for visibility */
+}
+
+.coin{
+    font-weight: bold;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.price{
+    padding-right: 5px;
+}
+.red{
+    color: red;
+}
+.blue{
+    color: green;
+}
+
+
+
+/* Padding should be more reasonable */
+
+
+.pricechange :hover {
+    background-color: #e2e6ea; /* Light hover effect */
+}
+
+/* Submenu styles */
+.sub1, .sub2 {
+    list-style-type: none;
+    display: none; /* Initially hidden */
+    position: absolute; /* Position relative to the parent li */
+    top: 100%; /* Position below the menu item */
+    left: 0;
+    background-color: white; /* Background for submenu */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+    z-index: 10; /* Ensure it appears above other elements */
+}
+
+.Menu > ul > li:hover .sub1,
+.Menu > ul > li:hover .sub2 {
+    width: 100%;
+    display: block; /* Show submenu on hover */
+}
+
+.sub1 > li, .sub2 > li {
+    padding: 10px 20px; /* Padding for submenu items */
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .Menu {
+        height: auto; /* Allow dynamic height */
+        flex-direction: column; /* Stack items on smaller screens */
+    }
+
+    .Menu > ul {
+        flex-direction: column; /* Stack menu items vertically */
+    }
+
+    .Menu > ul > li {
+        padding: 10px 0; /* Adjust padding for smaller screens */
+    }
+
+    .sub1, .sub2 {
+        position: relative; /* Adjust positioning for stacked layout */
+        top: 0; /* Align with the parent li */
+    }
+}
