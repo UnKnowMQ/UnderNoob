@@ -1,0 +1,53 @@
+.navbar {
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar > img {
+    width: 200px;
+    height: auto;
+    margin-left: 50px;
+}
+
+.find {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.find input {
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    width: 400px;
+}
+
+.fa-search {
+    margin-left: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.sign {
+    display: flex;
+    gap: 10px;
+    margin-right: 50px;
+}
+
+.sign button {
+    background-color: transparent;
+    font-size: 16px;
+    border: 1px solid black;
+    padding: 8px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    position: relative;
+}
+
+.sign_in:hover, .sign_up:hover {
+    background-color: #ddd;
+}
