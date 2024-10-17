@@ -24,11 +24,12 @@ const App = () => {
         <Navbar setShowLogin={setShowLogin} setShowRegister={setShowRegister} />
 
         <Menu />
-        <Coinprice/>
+        
         
         {!showLogin && !showRegister && (
           <>
             <Inspire />
+            <Coinprice/>
             <News />
             <Advertise/>
             <Below_News/>
