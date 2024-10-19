@@ -1,0 +1,35 @@
+.pricechange {
+    width: 100%; /* Increased height for better usability */
+    display: inline; 
+    height: 30px;
+    flex-direction: row;
+    justify-content: center; 
+    align-items: center; 
+  
+    background-color: #f8f9fa; /* Background color for visibility */
+}
+
+.coin{
+    font-weight: bold;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.price{
+    padding-right: 5px;
+}
+.red{
+    color: red;
+}
+.blue{
+    color: green;
+}
+
+
+
+/* Padding should be more reasonable */
+
+
+.pricechange :hover {
+    background-color: #e2e6ea; /* Light hover effect */
+}
+

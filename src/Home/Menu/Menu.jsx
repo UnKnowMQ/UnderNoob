@@ -2,7 +2,7 @@ import React from 'react'
 import './Menu.css'
 const Menu = () => {
   return (
-    <div className='Menu'>
+    <div class='Menu'>
       <ul>
         <li class='main1'>Personal Portfolio
             <ul class="sub1">

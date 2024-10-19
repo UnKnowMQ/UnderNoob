@@ -21,9 +21,11 @@
     padding: 0 20px; 
     text-align: center; 
     padding: 100px;
+    width: 100px;
 }
 
 .sub1, .sub2 {
     list-style-type: none;
     display: none;
+    width: 100%;
 }

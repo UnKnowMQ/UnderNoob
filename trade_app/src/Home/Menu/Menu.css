@@ -17,7 +17,12 @@
     margin: 0; 
 }
 
+<<<<<<< HEAD
 .Menu>ul>li {
+=======
+.Menu > ul > li {
+
+>>>>>>> 1b27f59c6b37ffaf8e7590c38e4ad8392c7a7d2e
     padding: 0 20px; 
     text-align: center; 
     padding: 100px;
@@ -26,6 +31,47 @@
 
 .sub1, .sub2 {
     list-style-type: none;
+<<<<<<< HEAD
     display: none;
     width: 100%;
+=======
+    display: none; /* Initially hidden */
+    position: absolute; /* Position relative to the parent li */
+    top: 100%; /* Position below the menu item */
+    left: 0;
+    background-color: white; /* Background for submenu */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
+    z-index: 10; /* Ensure it appears above other elements */
+}
+
+.Menu > ul > li:hover .sub1,
+.Menu > ul > li:hover .sub2 {
+    width: 100%;
+    display: block; /* Show submenu on hover */
+}
+
+.sub1 > li, .sub2 > li {
+    padding: 10px 20px; /* Padding for submenu items */
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .Menu {
+        height: auto; /* Allow dynamic height */
+        flex-direction: column; /* Stack items on smaller screens */
+    }
+
+    .Menu > ul {
+        flex-direction: column; /* Stack menu items vertically */
+    }
+
+    .Menu > ul > li {
+        padding: 10px 0; /* Adjust padding for smaller screens */
+    }
+
+    .sub1, .sub2 {
+        position: relative; /* Adjust positioning for stacked layout */
+        top: 0; /* Align with the parent li */
+    }
+>>>>>>> 1b27f59c6b37ffaf8e7590c38e4ad8392c7a7d2e
 }

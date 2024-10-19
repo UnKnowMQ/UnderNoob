@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from "react";
 import axios from "axios";
-import Coin from "./Coin.jsx";
+import Coin from "./coin.jsx";
 function Coinprice()
 {
   const [coins,setCoin] = useState([]);

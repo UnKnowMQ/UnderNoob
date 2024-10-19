@@ -1,77 +1,87 @@
+/* Container styling for the coin (Horizontal Layout) */
 .pricechange {
-    width: 100%; /* Increased height for better usability */
-    display: inline; 
-    height: 30px;
-    flex-direction: row;
-    justify-content: center; 
-    align-items: center; 
-  
-    background-color: #f8f9fa; /* Background color for visibility */
+    margin-left: 30px;
+    margin-top: 25px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Ensure it takes full width if needed */
+    display: inline;
 }
 
-.coin{
+/* Coin name and image aligned horizontally */
+.coin {
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    gap: 10px;
+}
+
+/* Image size control */
+.coin img {
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+/* Price styling */
+.price {
+    font-size: 18px;
     font-weight: bold;
-    padding-left: 30px;
-    padding-right: 30px;
-}
-.price{
-    padding-right: 5px;
-}
-.red{
-    color: red;
-}
-.blue{
-    color: green;
+    white-space: nowrap; /* Prevent line breaks */
 }
 
-
-
-/* Padding should be more reasonable */
-
-
-.pricechange :hover {
-    background-color: #e2e6ea; /* Light hover effect */
+/* Red color for negative price change */
+.red {
+    margin-left: 10px;
+    color: #ff4c4c;
+    font-weight: bold;
+    white-space: nowrap; /* Prevent line breaks */
 }
 
-/* Submenu styles */
-.sub1, .sub2 {
-    list-style-type: none;
-    display: none; /* Initially hidden */
-    position: absolute; /* Position relative to the parent li */
-    top: 100%; /* Position below the menu item */
-    left: 0;
-    background-color: white; /* Background for submenu */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Slight shadow for depth */
-    z-index: 10; /* Ensure it appears above other elements */
+/* Blue color for positive price change */
+.blue {
+    margin-left: 10px;
+    color: #4caf50;
+    font-weight: bold;
+    white-space: nowrap; /* Prevent line breaks */
 }
 
-.Menu > ul > li:hover .sub1,
-.Menu > ul > li:hover .sub2 {
-    width: 100%;
-    display: block; /* Show submenu on hover */
+/* Hover effect */
+.pricechange:hover {
+    background-color: #e0e0e0;
+    cursor: pointer;
 }
-
-.sub1 > li, .sub2 > li {
-    padding: 10px 20px; /* Padding for submenu items */
-}
-
-/* Media Queries for responsiveness */
-@media (max-width: 768px) {
-    .Menu {
-        height: auto; /* Allow dynamic height */
-        flex-direction: column; /* Stack items on smaller screens */
+@media (max-width: 768px) { /* Target tablets and smaller screens */
+    .pricechange {
+        margin-left: 10px; /* Reduce left margin */
+        width: calc(100% - 20px); /* Full width with reduced margins */
     }
-
-    .Menu > ul {
-        flex-direction: column; /* Stack menu items vertically */
+    .coin {
+        font-size: 14px; /* Adjust font size for better readability */
     }
-
-    .Menu > ul > li {
-        padding: 10px 0; /* Adjust padding for smaller screens */
+    .price {
+        font-size: 16px; /* Adjust price font size */
     }
+    .red, .blue {
+        font-size: 14px; /* Adjust color change font size */
+    }
+}
 
-    .sub1, .sub2 {
-        position: relative; /* Adjust positioning for stacked layout */
-        top: 0; /* Align with the parent li */
+@media (max-width: 480px) { /* Target mobile devices */
+    .pricechange {
+        margin-left: 5px; /* Further reduce left margin */
+        padding: 8px 10px; /* Reduce padding for mobile */
+    }
+    .coin {
+        font-size: 12px; /* Smaller font size for mobile */
+    }
+    .price {
+        font-size: 14px; /* Smaller price font size */
+    }
+    .red, .blue {
+        font-size: 12px; /* Smaller color change font size */
     }
 }
